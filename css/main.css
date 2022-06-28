@@ -331,10 +331,12 @@ button:focus, button:focus-visible {
   outline: 0.3em dashed hsl(0deg, 100%, 74%);
   outline-offset: 0.2em;
 }
-
-input:focus, input:focus-visible {
-  outline: 0.3em dashed hsl(248deg, 32%, 49%);
+input:focus{
+  border: 1px solid hsl(249deg, 10%, 26%);
 }
+/* input:focus-visible {
+  outline: 0.3em dashed hsl(248deg, 32%, 49%);
+} */
 
 a {
   text-decoration: none;
