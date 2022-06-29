@@ -16,7 +16,7 @@ form.addEventListener("submit", (event) =>{
     inputs.forEach(input => {
         validateInput(input, nonValidInputs)
     })
-    if(nonValidInputs.length == 0){
+    if(nonValidInputs.length === 0){
         form.submit()
         // empty the inputs after the submit
         inputs.forEach(input => {
@@ -24,8 +24,7 @@ form.addEventListener("submit", (event) =>{
         })
     }
 })
-function nonValid(input){
-    
+function nonValid(input){ 
     document.querySelector(`#${input.dataset.id}`).classList.add("display")
     document.querySelector(`#${input.dataset.id}`).nextElementSibling.classList.add("display")
     input.classList.remove("border-green")
@@ -36,7 +35,8 @@ function nonValid(input){
 }
 function yesValid(input){
     document.querySelector(`#${input.dataset.id}`).classList.remove("display")
-    document.querySelector(`#${input.dataset.id}`).nextElementSibling.classList.remove("display")
+    // document.querySelector(`#${input.dataset.id}`).nextElementSibling.classList.remove("display")
+    document.querySelector(`#${input.dataset.id}`).nextElementSibling.src="../images/validity-icon-27.jpg"
     input.classList.remove("border-red")
     input.classList.add("border-green")
     input.setAttribute("aria-invalid", "true")

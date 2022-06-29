@@ -331,13 +331,12 @@ button:focus, button:focus-visible {
   outline: 0.3em dashed hsl(0deg, 100%, 74%);
   outline-offset: 0.2em;
 }
-input:focus{
-  border: 1px solid hsl(249deg, 10%, 26%);
+input:focus:invalid{
+  outline: none;
 }
-/* input:focus-visible {
-  outline: 0.3em dashed hsl(248deg, 32%, 49%);
-} */
-
+input:valid{
+  border: 0.125rem solid hsl(80deg 100% 36%);
+}
 a {
   text-decoration: none;
 }
@@ -560,7 +559,7 @@ input[type=email].border-red::placeholder {
 }
 
 .border-green {
-  border: 0.125rem solid hsl(154deg, 59%, 51%);
+  border: 0.125rem solid hsl(80deg 100% 36%);
 }
 
 .submit__btn {
