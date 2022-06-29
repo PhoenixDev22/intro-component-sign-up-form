@@ -41,6 +41,7 @@ function nonValid(input){
 }
 function yesValid(input){
     document.querySelector(`#${input.dataset.id}`).classList.remove("display")
+    document.querySelector(`#${input.dataset.id}`).nextElementSibling.classList.add("display")
     document.querySelector(`#${input.dataset.id}`).nextElementSibling.src="../images/validity-icon-27.jpg"
     input.classList.remove("border-red")
     input.classList.add("border-green")
