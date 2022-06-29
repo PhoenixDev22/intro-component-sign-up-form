@@ -334,9 +334,9 @@ button:focus, button:focus-visible {
 input:focus:invalid{
   outline: none;
 }
-input:valid{
+/* input:valid{
   border: 0.125rem solid hsl(80deg 100% 36%);
-}
+} */
 a {
   text-decoration: none;
 }

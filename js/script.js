@@ -24,23 +24,26 @@ form.addEventListener("submit", (event) =>{
         })
     }
 })
+inputs.forEach(input => {
+    const nonValidInputs = []
+    input.onblur = () => validateInput(input, nonValidInputs) 
+    
+})
 function nonValid(input){ 
     document.querySelector(`#${input.dataset.id}`).classList.add("display")
     document.querySelector(`#${input.dataset.id}`).nextElementSibling.classList.add("display")
+    document.querySelector(`#${input.dataset.id}`).nextElementSibling.src="../images/icon-error.svg"
     input.classList.remove("border-green")
     input.classList.add("border-red")
     input.removeAttribute("placeholder");
     input.setAttribute("aria-invalid", "false")
-    input.focus()
 }
 function yesValid(input){
     document.querySelector(`#${input.dataset.id}`).classList.remove("display")
-    // document.querySelector(`#${input.dataset.id}`).nextElementSibling.classList.remove("display")
     document.querySelector(`#${input.dataset.id}`).nextElementSibling.src="../images/validity-icon-27.jpg"
     input.classList.remove("border-red")
     input.classList.add("border-green")
     input.setAttribute("aria-invalid", "true")
-    input.blur()
 }
 
 // check the input which  type is it to validate its value.
