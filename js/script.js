@@ -29,13 +29,14 @@ inputs.forEach(input => {
     input.onblur = () => validateInput(input, nonValidInputs) 
     
 })
+
 function nonValid(input){ 
     document.querySelector(`#${input.dataset.id}`).classList.add("display")
     document.querySelector(`#${input.dataset.id}`).nextElementSibling.classList.add("display")
     document.querySelector(`#${input.dataset.id}`).nextElementSibling.src="../images/icon-error.svg"
     input.classList.remove("border-green")
     input.classList.add("border-red")
-    input.removeAttribute("placeholder");
+    input.removeAttribute("placeholder")
     input.setAttribute("aria-invalid", "false")
 }
 function yesValid(input){
@@ -70,6 +71,7 @@ function validateInput(input, nonValidInputs){
             nonValid(input)
             nonValidInputs.push(input.id)
             input.setAttribute("placeholder", "email@example/com")
+            input.onfocus = () =>  input.setAttribute("placeholder", "")
         }else{
             yesValid(input)
         }
