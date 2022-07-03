@@ -25,16 +25,17 @@ form.addEventListener("submit", (event) =>{
         })
     }
 })
+/*
 inputs.forEach(input => {
     const nonValidInputs = []
     input.onblur = () => validateInput(input, nonValidInputs) 
 })
-/*
+*/
 inputs.forEach(input => {
     const nonValidInputs = []
     input.oninput = () => validateInput(input, nonValidInputs) 
 })
-*/
+
 function nonValid(input){ 
     document.querySelector(`#${input.dataset.id}`).classList.add("display")
     if (input.type !== "password"){
