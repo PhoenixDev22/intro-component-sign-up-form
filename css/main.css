@@ -478,12 +478,12 @@ main {
   font-family: inherit;
 }
 input:focus{
-  outline:  .2em dashed hsl(248deg, 32%, 49%);
+  outline: .2em dashed hsl(248deg, 32%, 49%);
   outline-offset: .25em;
 }
 
 input:focus:invalid{
-  outline:  .2em dashed hsl(0deg, 100%, 74%);
+  outline: .2em dashed hsl(0deg, 100%, 74%);
   outline-offset: .25em;
 }
 
