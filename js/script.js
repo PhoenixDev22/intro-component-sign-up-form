@@ -43,15 +43,10 @@ function nonValid(input){
 }
 function yesValid(input){
     document.querySelector(`#${input.dataset.id}`).classList.remove("display")
-<<<<<<< HEAD
     if (input.type !== "password"){
         document.querySelector(`#${input.dataset.id}`).nextElementSibling.classList.add("display")
         document.querySelector(`#${input.dataset.id}`).nextElementSibling.src="../images/validity-icon-27.jpg"
     }
-=======
-    document.querySelector(`#${input.dataset.id}`).nextElementSibling.classList.add("display")
-    document.querySelector(`#${input.dataset.id}`).nextElementSibling.src="../images/validity-icon-27.jpg"
->>>>>>> 01ea8610457e72264078e710cb9a34879ff5e34e
     input.classList.remove("border-red")
     input.classList.add("border-green")
     input.setAttribute("aria-invalid", "true")
