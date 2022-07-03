@@ -5,7 +5,7 @@ const lastNameInput = document.getElementById("lastNameInput")
 const emailInput = document.getElementById("emailInput")
 const passwordInput = document.getElementById("passwordInput")
 const validateEmailRegExp = /^[a-zA-Z0-9][\-_\.\+\!\#\$\%\&\'\*\/\=\?\^\`\{\|]{0,1}([a-zA-Z0-9][\-_\.\+\!\#\$\%\&\'\*\/\=\?\^\`\{\|]{0,1})*[a-zA-Z0-9]@[a-zA-Z0-9][-\.]{0,1}([a-zA-Z][-\.]{0,1})*[a-zA-Z0-9]\.[a-zA-Z0-9]{1,}([\.\-]{0,1}[a-zA-Z]){0,}[a-zA-Z0-9]{0,}$/i;
-const validateUserName = /^[A-Za-z]+$/
+const validateUserName = /^[a-z ,.'-]+$/i
 const validatePassword = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/
 
 
