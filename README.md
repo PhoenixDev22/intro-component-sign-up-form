@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/PhoenixDev22/intro-component-sign-up-form)
-- Live Site URL: [Add live site URL here](https://stirring-pastelito-644489.netlify.app/)
+- Solution URL: [solution here ](https://github.com/PhoenixDev22/intro-component-sign-up-form)
+- Live Site URL: [live site here](https://stirring-pastelito-644489.netlify.app/)
 
 ## My process
 
@@ -49,6 +49,7 @@ Users should be able to:
 - Mobile-first workflow
 
 
+
 ### What I learned
 
 
@@ -58,6 +59,8 @@ Users should be able to:
 
 
 ### Useful resources
+- To check a password between 7 to 15 characters which contain at least one numeric digit and a special character:
+[w3resource](https://w3resource.com/javascript/form/password-validation.php#:~:text=%20Password%20validation%20%201%20Check%20a%20password,numeric%20digit%20and%20a%20special%20character.%20More%20)
 
 - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.

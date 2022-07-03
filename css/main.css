@@ -326,17 +326,11 @@ button {
   border: none;
   cursor: pointer;
 }
-
 button:focus, button:focus-visible {
-  outline: 0.3em dashed hsl(0deg, 100%, 74%);
+  outline: 0.3em dashed  hsl(248deg, 32%, 49%);
   outline-offset: 0.2em;
 }
-input:focus:invalid{
-  outline: none;
-}
-/* input:valid{
-  border: 0.125rem solid hsl(80deg 100% 36%);
-} */
+
 a {
   text-decoration: none;
 }
@@ -344,11 +338,6 @@ a {
 a:focus, a:focus-visible {
   outline: 0.3em dashed hsl(154deg, 59%, 51%);
 }
-
-button:focus, button:focus-visible {
-  outline: 0.3em dashed hsl(154deg, 59%, 51%);
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -360,8 +349,11 @@ button:focus, button:focus-visible {
   border: 0;
 }
 
-input:-internal-autofill-selected {
-  background-color: transparent;
+input:not([type="password"]):-webkit-autofill,
+input:not([type="password"]):-webkit-autofill:hover, 
+input:not([type="password"]):-webkit-autofill:focus{
+  box-shadow: 0 0 0px 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 body {
@@ -485,6 +477,15 @@ main {
   color: hsl(249deg, 10%, 26%);
   font-family: inherit;
 }
+input:focus{
+  outline:  .2em dashed hsl(248deg, 32%, 49%);
+  outline-offset: .25em;
+}
+
+input:focus:invalid{
+  outline:  .2em dashed hsl(0deg, 100%, 74%);
+  outline-offset: .25em;
+}
 
 input::-webkit-input-placeholder {
   color: hsl(246deg, 25%, 77%);
@@ -532,6 +533,7 @@ input[type=email].border-red::placeholder {
 }
 
 .error {
+  padding: .7em 0;
   text-align: right;
   color: hsl(0deg, 100%, 74%);
   font-size: 0.75rem;
