@@ -319,7 +319,9 @@ template {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-
+:focus:not(:focus-visible){
+  outline: none;
+}
 button {
   background-color: transparent;
   outline: none;
@@ -330,12 +332,12 @@ button:focus, button:focus-visible {
   outline: 0.3em dashed  hsl(248deg, 32%, 49%);
   outline-offset: 0.2em;
 }
-
 a {
   text-decoration: none;
 }
 
 a:focus, a:focus-visible {
+  outline-offset: 0.2em;
   outline: 0.3em dashed hsl(154deg, 59%, 51%);
 }
 .sr-only {
@@ -352,7 +354,7 @@ a:focus, a:focus-visible {
 input:not([type="password"]):-webkit-autofill,
 input:not([type="password"]):-webkit-autofill:hover, 
 input:not([type="password"]):-webkit-autofill:focus{
-  box-shadow: 0 0 0px 1000px #fff inset;
+  box-shadow: 0 0 0px 1000px #fff inset !important;
   transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -482,7 +484,7 @@ input:focus{
   outline-offset: .25em;
 }
 
-input:focus:invalid{
+input.border-red:focus-visible{
   outline: .2em dashed hsl(0deg, 100%, 74%);
   outline-offset: .25em;
 }
@@ -523,11 +525,6 @@ input[type=email].border-red::-moz-placeholder {
 input[type=email].border-red:-ms-input-placeholder {
   color: hsl(0deg, 100%, 74%);
 }
-
-input[type=email].border-red::-ms-input-placeholder {
-  color: hsl(0deg, 100%, 74%);
-}
-
 input[type=email].border-red::placeholder {
   color: hsl(0deg, 100%, 74%);
 }
