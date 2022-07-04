@@ -16,13 +16,15 @@ form.addEventListener("submit", (event) =>{
     inputs.forEach(input => {
         validateInput(input, nonValidInputs)
     })
-    document.getElementById(`${nonValidInputs[0]}`).focus()
+   
     if(nonValidInputs.length === 0){
         form.submit()
         // empty the inputs after the submit
         inputs.forEach(input => {
             input.value = ""
         })
+    }else{
+        document.getElementById(`${nonValidInputs[0]}`).focus()
     }
 })
 inputs.forEach(input => {
