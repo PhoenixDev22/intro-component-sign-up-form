@@ -25,12 +25,6 @@ form.addEventListener("submit", (event) =>{
         })
     }
 })
-/*
-inputs.forEach(input => {
-    const nonValidInputs = []
-    input.onblur = () => validateInput(input, nonValidInputs) 
-})
-*/
 inputs.forEach(input => {
     const nonValidInputs = []
     input.oninput = () => validateInput(input, nonValidInputs) 
@@ -66,7 +60,7 @@ function validateInput(input, nonValidInputs){
     switch (inputType){
         case "text":
             if(input.value === "" || !validateUserName.test(input.value)){
-                if(!validateUserName.test(input.value)) elementValue.textContent = `${input.name} should not have numbers only alphabets`
+                if(!validateUserName.test(input.value)) elementValue.textContent = `${input.name} is not valid`
                 if(input.value.length == 0) elementValue.textContent = `${input.name} connot be empty`
                 nonValid(input) 
                 nonValidInputs.push(input.id)
@@ -103,6 +97,5 @@ function validateInput(input, nonValidInputs){
 
         default:  return;
     }  
-    console.log(nonValidInputs)
 return nonValidInputs;
 }
