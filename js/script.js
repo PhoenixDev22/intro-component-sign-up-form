@@ -5,7 +5,7 @@ const lastNameInput = document.getElementById("lastNameInput")
 const emailInput = document.getElementById("emailInput")
 const passwordInput = document.getElementById("passwordInput")
 const validateEmailRegExp = /^[a-zA-Z0-9][\-_\.\+\!\#\$\%\&\'\*\/\=\?\^\`\{\|]{0,1}([a-zA-Z0-9][\-_\.\+\!\#\$\%\&\'\*\/\=\?\^\`\{\|]{0,1})*[a-zA-Z0-9]@[a-zA-Z0-9][-\.]{0,1}([a-zA-Z][-\.]{0,1})*[a-zA-Z0-9]\.[a-zA-Z0-9]{1,}([\.\-]{0,1}[a-zA-Z]){0,}[a-zA-Z0-9]{0,}$/i;
-const validateUserName = /^[A-Za-z]+$/
+const validateUserName = /^[a-z ,.'-]+$/i
 const validatePassword = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/
 
 
@@ -16,13 +16,15 @@ form.addEventListener("submit", (event) =>{
     inputs.forEach(input => {
         validateInput(input, nonValidInputs)
     })
-    document.getElementById(`${nonValidInputs[0]}`).focus()
+   
     if(nonValidInputs.length === 0){
         form.submit()
         // empty the inputs after the submit
         inputs.forEach(input => {
             input.value = ""
         })
+    }else{
+        document.getElementById(`${nonValidInputs[0]}`).focus()
     }
 })
 inputs.forEach(input => {
@@ -60,7 +62,7 @@ function validateInput(input, nonValidInputs){
     switch (inputType){
         case "text":
             if(input.value === "" || !validateUserName.test(input.value)){
-                if(!validateUserName.test(input.value)) elementValue.textContent = `${input.name} should not have numbers only alphabets`
+                if(!validateUserName.test(input.value)) elementValue.textContent = `${input.name} is not valid`
                 if(input.value.length == 0) elementValue.textContent = `${input.name} connot be empty`
                 nonValid(input) 
                 nonValidInputs.push(input.id)
@@ -97,6 +99,5 @@ function validateInput(input, nonValidInputs){
 
         default:  return;
     }  
-    console.log(nonValidInputs)
 return nonValidInputs;
 }
