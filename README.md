@@ -75,7 +75,7 @@ Improving the Client side validation , using:
 - To check a password between 7 to 15 characters which contain at least one numeric digit and a special character:
 [w3resource](https://w3resource.com/javascript/form/password-validation.php#:~:text=%20Password%20validation%20%201%20Check%20a%20password,numeric%20digit%20and%20a%20special%20character.%20More%20)
 
-- [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation) - This helped me to learn about the Client side form validation with different tyeps.
+- [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation) - This helped me to learn about the Client side form validation with different types.
 
 
 
