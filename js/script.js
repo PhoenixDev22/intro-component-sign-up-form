@@ -34,10 +34,8 @@ inputs.forEach(input => {
 
 function nonValid(input){ 
     document.querySelector(`#${input.dataset.id}`).classList.add("display")
-    if (input.type !== "password"){
-        document.querySelector(`#${input.dataset.id}`).nextElementSibling.classList.add("display")
-        document.querySelector(`#${input.dataset.id}`).nextElementSibling.src="../images/icon-error.svg"
-    }
+    document.querySelector(`#${input.dataset.id}`).nextElementSibling.classList.add("display")
+    document.querySelector(`#${input.dataset.id}`).nextElementSibling.src="../images/icon-error.svg"
     input.classList.remove("border-green")
     input.classList.add("border-red")
     input.removeAttribute("placeholder")
@@ -45,10 +43,8 @@ function nonValid(input){
 }
 function yesValid(input){
     document.querySelector(`#${input.dataset.id}`).classList.remove("display")
-    if (input.type !== "password"){
-        document.querySelector(`#${input.dataset.id}`).nextElementSibling.classList.add("display")
-        document.querySelector(`#${input.dataset.id}`).nextElementSibling.src="../images/validity-icon-27.jpg"
-    }
+    document.querySelector(`#${input.dataset.id}`).nextElementSibling.classList.add("display")
+    document.querySelector(`#${input.dataset.id}`).nextElementSibling.src="../images/validity-icon-27.jpg"
     input.classList.remove("border-red")
     input.classList.add("border-green")
     input.setAttribute("aria-invalid", "true")
