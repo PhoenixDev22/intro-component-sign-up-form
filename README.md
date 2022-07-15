@@ -28,10 +28,9 @@ Users should be able to:
 - Receive an error message when the `form` is submitted if:
   - Any `input` field is empty. The message for this error should say *"[Field Name] cannot be empty"*
   - The email address is not formatted correctly (i.e. a correct email address should have this structure: `name@host.tld`). The message for this error should say *"Looks like this is not an email"*
+- The “classic” way to perform validation is when the user submits his data via the “submit”-button. The validation is executed and if any errors are found, feedback is returned and displayed to the user. With this, I also added another function to check the validity  of the input value ``oninput event``. 
   - Every time  you change the value of the input (oninput event),  If it is valid, then error message will be removed and valid (images) being shown with green border. If the data is not valid, it run nonValid() to show the appropriate error and error messages next to each field.
-  - The “classic” way to perform validation is when the user submits his data via the “submit”-button. The validation is executed and if any errors are found, feedback is returned and displayed to the user.I also added another function to check the validity  of the input value ``oninput event``. 
-
-
+  
 ### Screenshot
 
 ![](./images/Web%20capture_28-6-2022_192322_127.0.0.1.jpeg)
@@ -75,7 +74,7 @@ Improving the Client side validation , using:
 - To check a password between 7 to 15 characters which contain at least one numeric digit and a special character:
 [w3resource](https://w3resource.com/javascript/form/password-validation.php#:~:text=%20Password%20validation%20%201%20Check%20a%20password,numeric%20digit%20and%20a%20special%20character.%20More%20)
 
-- [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation) - This helped me to learn about the Client side form validation with different tyeps.
+- [MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation) - This helped me to learn about the Client side form validation with different types.
 
 
 
